@@ -4,11 +4,14 @@ var DomObject = function(){
     var newButton = document.createElement("button");
     var textElement = document.createTextNode(text);
     newButton.appendChild(textElement);
+    addEventClick(newButton);
     document.getElementById(id).appendChild(newButton);
   }
 
-  function addEvent(){
-    
+  function addEventClick(button){
+    button.addEventListener("click", function(){
+      button.style.backgroundColor = "#000";
+    });
   }
 
   return{
